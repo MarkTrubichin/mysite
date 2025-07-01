@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+static_root/
+*.sqlite3
+
+# If you use PostgreSQL or MySQL dumps
+*.sql
+
+# Secret files
+*.env
+.env.*
+
+# IDE / editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage / test reports
+htmlcov/
+.tox/
+.coverage
+coverage.xml
+nosetests.xml
+test-results/
+
+# Migrations (optional — можно не игнорить если хочешь в гите)
+# */migrations/__pycache__/
+# */migrations/*.pyc
+# */migrations/*.pyo
+
+# Node (если вдруг используешь для фронта)
+node_modules/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Pip tools
+pip-log.txt
+
+# PyInstaller
+*.manifest
+*.spec
