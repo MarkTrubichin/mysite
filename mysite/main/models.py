@@ -1,12 +1,16 @@
 from django.db import models
 
-# Create your models here.
-class Projects(models.Model):
+class Project(models.Model):
+    PROJECT_TYPE_CHOICES = [
+        ('commercial', 'Commercial'),
+        ('personal', 'Personal'),
+    ]
+
     title = models.CharField(max_length=100)
-    category = models.CharField(max_length=50)
-    description = models.TextField()
+    project_type = models.CharField(max_length=20, choices=PROJECT_TYPE_CHOICES, default='personal')
+    category = models.CharField(max_length=20, default='other')
+    description = models.TextField(blank=True)
     image = models.ImageField(upload_to='projects/', blank=True)
-    url = models.URLField(blank=True)
 
     def __str__(self):
         return self.title
