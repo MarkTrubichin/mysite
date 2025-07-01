@@ -1,0 +1,90 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 70px;
+    padding: 10px 0;
+    border-bottom: 3px solid white;
+    align-items: center;
+    animation: headerFadeIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+header a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+}
+
+header a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-bottom: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 191, 255, 0.3);
+}
+
+
+header a:hover {
+    transform: scale(1.1);
+}
+
+@keyframes headerFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    header a {
+         margin: 0 15px;
+    }
+}
+
+@media (max-width: 810px) {
+    header a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 570px) {
+    header a {
+        font-size: 12px;
+        margin: 0 10px;
+    }
+    header {
+        grid-template-rows: 50px;
+    }
+}
+@media (max-width: 395px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
+
+    header a {
+        font-size: 10px;
+        margin: 2px;
+        padding: 2px 4px;
+        border-width: 1px;
+    }
+}
+
+@media (max-width: 290px) {
+    header a {
+        font-size: 8px;
+        padding: 1px 2px;
+        margin: 1px;
+        border-width: 1px;
+    }
+}
